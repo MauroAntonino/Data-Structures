@@ -29,7 +29,7 @@
 # resp = pQueue.min()
 # print(resp)
 
-from DataStructures.search_trees.binary_search_tree import TreeMap
+# from DataStructures.search_trees.binary_search_tree import TreeMap
 # tree :TreeMap = TreeMap()
 # tree["a"] = 10
 # tree["b"] = 20
@@ -45,11 +45,19 @@ from DataStructures.search_trees.binary_search_tree import TreeMap
 # response = tree.find_min()
 # print(response)
 
-from DataStructures.search_trees.splay_tree import SplayTreeMap
-tree :SplayTreeMap = SplayTreeMap()
+# from DataStructures.search_trees.splay_tree import SplayTreeMap
+# tree :SplayTreeMap = SplayTreeMap()
+# tree["a"] = 10
+# tree["b"] = 20
+# tree["c"] = 30
+# response = tree.find_min()
+# print(response)
+
+
+from DataStructures.search_trees.red_black_tree import RedBlackTreeMap
+tree :RedBlackTreeMap = RedBlackTreeMap()
 tree["a"] = 10
 tree["b"] = 20
 tree["c"] = 30
 response = tree.find_min()
 print(response)
-
