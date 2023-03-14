@@ -54,10 +54,44 @@
 # print(response)
 
 
-from DataStructures.search_trees.red_black_tree import RedBlackTreeMap
-tree :RedBlackTreeMap = RedBlackTreeMap()
-tree["a"] = 10
-tree["b"] = 20
-tree["c"] = 30
-response = tree.find_min()
+# from DataStructures.search_trees.red_black_tree import RedBlackTreeMap
+# tree :RedBlackTreeMap = RedBlackTreeMap()
+# tree["a"] = 10
+# tree["b"] = 20
+# tree["c"] = 30
+# response = tree.find_min()
+# print(response)
+
+from DataStructures.graph.graph import Graph
+from DataStructures.graph.BFS import BFS
+from DataStructures.graph.DFS import DFS
+from DataStructures.graph.Dijkstra import shortest_path_lengths, shortest_path_tree
+from DataStructures.graph.prim_arnik import MST_PrimJarnik
+from DataStructures.graph.kruskal import MST_Kruskal
+
+graph :Graph = Graph()
+graph.insert_vertex(1)
+graph.insert_vertex(2)
+graph.insert_vertex(3)
+graph.insert_vertex(4)
+
+graph.insert_edge(1,2,1)
+graph.insert_edge(1,3,2)
+graph.insert_edge(3,4,1)
+print(graph.edges())
+discovered = {}
+DFS(graph, 1, discovered)
+print(discovered)
+BFS(graph, 1, discovered)
+print(discovered)
+response = shortest_path_lengths(graph, 1)
 print(response)
+response = shortest_path_tree(graph, 1, discovered)
+print(response)
+
+response = MST_PrimJarnik(graph)
+var = [ item.element() for item in response ]
+print(var)
+response = MST_Kruskal(graph)
+var = [ item.element() for item in response ]
+print(var)
