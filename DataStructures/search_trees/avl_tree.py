@@ -36,7 +36,7 @@ class AVLTreeMap(TreeMap):
         alignment = (child == self.left(p))
         return self._tall_child(child, alignment)
 
-    def rebalance(self, p):
+    def _rebalance(self, p):
         while p is not None:
             old_height = p._node._height # trivially 0 if new node
             if not self._isbalanced(p): # imbalance detected!
